@@ -1,0 +1,17 @@
+[Template]
+Name=OpenGL Template
+Icon=
+Description=A basic OpenGL program
+Catagory=Graphics
+
+[Editor]
+Text=OpenGL.txt
+CursorX=0
+CursorY=71
+
+[Project]
+Console=0
+Cpp=1
+CompilerOptions=
+Libs=-k$(LIBPATH)\libopengl32.aw
+Name=Project1

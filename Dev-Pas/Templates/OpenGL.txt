@@ -1,0 +1,10 @@
+program OpenGL;
+
+{$APPTYPE GUI}
+{$MODE DELPHI}
+
+uses Windows, OpenGl32;
+
+begin
+
+end.

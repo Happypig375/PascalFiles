@@ -1,0 +1,9 @@
+[package]
+name=fcl
+version=1.0.6
+[require]
+packages=rtl paszlib
+packages_linux=inet
+packages_win32=mysql ibase
+packages_freebsd=inet
+packages_netbsd=inet

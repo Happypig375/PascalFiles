@@ -1,0 +1,7 @@
+[package]
+name=ibase
+version=1.0.6
+[require]
+libc=y
+packages_win32=
+packages=rtl 

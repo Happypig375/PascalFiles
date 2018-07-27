@@ -1,0 +1,10 @@
+[package]
+name=opengl
+version=1.0.6
+[require]
+packages_linux=x11
+packages_win32=
+packages_freebsd=x11
+libc=y
+packages=rtl 
+packages_netbsd=x11

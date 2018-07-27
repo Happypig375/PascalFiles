@@ -1,0 +1,14 @@
+[Project]
+FileName=C:\pp\examples\gtk\Project 1.dp
+Name=Project 1
+MainUnit=C:\pp\examples\gtk\editform.pp
+UnitCount=1
+ResFiles=
+NoConsole=0
+IsDll=0
+Icon=C:\pp\Icon\Editor.ico
+CompilerOptions=
+IncludeDirs=
+ObjFile=
+[Unit1]
+FileName=C:\pp\examples\gtk\editform.pp

@@ -1,0 +1,17 @@
+[Template]
+Name=GTK+
+Icon=GTK+.ico
+Description=A template for creating GTK+ applications.
+Catagory=GUI Toolkits
+
+[Editor]
+Text=GTK+.txt
+CursorX=3
+CursorY=9
+
+[Project]
+Console=0
+Cpp=0
+CompilerOptions=
+Libs=-k$(LIBPATH)\libgtk.aw -k$(LIBPATH)\libgdk.aw -k$(LIBPATH)\libgmodule.aw -k$(LIBPATH)\libglib.aw
+Name=GTK+ Application

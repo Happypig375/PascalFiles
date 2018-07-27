@@ -1,0 +1,14 @@
+[Project]
+FileName=C:\Dev-Pas\Examples\WinHello\Windows Hello.dp
+Name=Windows Hello
+MainUnit=C:\Users\s12101.ITEDI120.000\Desktop\Untitled2.pas
+UnitCount=2
+ResFiles=C:\Colin\Dev-Pascal\Examples\WinHello\rsrc.rc
+NoConsole=0
+IsDll=0
+Icon=C:\COLIN\DEV-PASCAL\Bin\Mainicon.ico
+
+[Unit1]
+FileName=C:\Users\s12101.ITEDI120.000\Desktop\Untitled2.pas
+[Unit2]
+FileName=Untitled3

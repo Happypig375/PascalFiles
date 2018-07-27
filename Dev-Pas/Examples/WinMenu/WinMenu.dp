@@ -1,0 +1,16 @@
+[Project]
+FileName=C:\Colin\Dev-Pascal\Examples\WinMenu\WinMenu.dp
+Name=WinMenu
+MainUnit=C:\Colin\Dev-Pascal\Examples\WinMenu\Menu.pp
+UnitCount=1
+ResFiles=C:\Colin\Dev-Pascal\Examples\WinMenu\rsrc.rc
+NoConsole=1
+IsDll=0
+Icon=C:\COLIN\DEV-PA~1\BIN\Mainicon.ico
+CompilerOptions=
+IncludeDirs=
+ObjFile=
+
+[Unit1]
+FileName=C:\Colin\Dev-Pascal\Examples\WinMenu\Menu.pp
+

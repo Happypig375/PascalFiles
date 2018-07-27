@@ -1,0 +1,17 @@
+[Template]
+Name=Hello World
+Icon=Hello.ico
+Description=A classic Hello World program.
+Catagory=Additional
+
+[Editor]
+Text=Hello.txt
+CursorX=3
+CursorY=8
+
+[Project]
+Console=1
+Cpp=1
+CompilerOptions=
+Libs=
+Name=Hello World

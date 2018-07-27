@@ -1,0 +1,6 @@
+[package]
+name=mmsystem
+version=1.0.6
+[require]
+packages=rtl 
+packages_win32=
