@@ -25,7 +25,7 @@ begin
       calcpt(X);
       SCD := SCD + P;
       if SCD >= 15 then WIN := 2;
-    end;writeln('Score - P1: ', FST, ', P2: ', SCD)
+    end
   until (FST >= 15) or (SCD >= 15);
   writeln('The winner is player ', WIN);
   readln

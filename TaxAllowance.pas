@@ -32,6 +32,7 @@ begin
     else TotalAllow := TotalAllow + 10000 * NoChild;
     TotalAllow := TotalAllow + NoDep * 15000;
     ChargeIncome := Income - TotalAllow;
+    Tax := 0;
     case ChargeIncome of
       0..20000 : Tax := ChargeIncome div 10;
       20001..40000 : Tax := 2000 + (ChargeIncome - 20000) div 5;
