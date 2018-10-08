@@ -9,7 +9,18 @@ procedure PlayerTurn(var stones : integer);
 var
     take : integer;
 begin
-    ......
+    writeln;
+    writeln('Player Turn'); 
+    write('Input number of stones to be taken: ');
+    readln(take);
+    while (take < 1) or (take > 3) or (take > stones) do
+    begin
+        writeln('Invalid input. Please re-enter.');
+        write('Input number of stones to be taken: ');
+        readln(take);
+    end;
+    stones := stones - take;
+    writeln('Stones left = ', stones)
 end;    {PlayerTurn}
 
 procedure ComputerTurn(var stones : integer);
@@ -21,34 +32,34 @@ begin
     writeln('Computer Turn');
     repeat
         take := random(3)+1;
-    until take <= sontes;
+    until take <= stones;
     writeln('Computer takes ', take);
     stones := stones - take;
     writeln('Stones left = ', stones)
 end;    {ComputerTurn}
 
-begin { main program}
+begin {main program}
     randomize;
-    endgame := ____________________;
+    endgame := FALSE;
     {generate stones between 15 and 30}
-    NIMstones := ___________________;
-    turn := _________________;
-    writeln(_________________);
+    NIMstones := random(16)+15;
+    turn := 'player';
+    writeln('There are ', NIMstones, ' stones.');
     repeat
         if turn = 'player'
             then begin
             PlayerTurn(NIMstones);
             turn := 'computer'
             end
-        else ______________
-        ________________
-        ____________
-        _______________
-        _______________
-        if NIMstones = _______
-            thenb endgame := _______________
+        else begin
+             ComputerTurn(NIMstones);
+             turn := 'player'
+             end;
+        if NIMstones = 0
+            then endgame := TRUE
     until endgame;
     if turn = 'computer'
         then writeln('Computer wins!')
         else writeln('Player wins!')
+    ;readln
 end.
