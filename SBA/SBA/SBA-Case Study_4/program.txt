@@ -1,0 +1,241 @@
+program Text_File_Analyst;
+uses Crt;
+var
+  line : array[1..99] of string;
+  i, j, number_of_lines, choice, number : integer;
+
+
+procedure Read_File;
+var
+  filename : string;
+  text_file : text;
+begin
+  clrscr;
+  write('Enter the filename of the text file you want to read: ');
+  readln(filename);
+  assign(text_file, filename);
+  ___________________________;
+  number_of_lines := 0;
+  while not eof(text_file) do
+    begin
+      number_of_lines := _______________________________________;
+      readln(________________, line[number_of_lines])
+    end;
+  close(text_file)
+end;
+
+
+procedure Display_File;
+begin
+  clrscr;
+  for i := 1 to number_of_lines do
+    writeln(____________________________);
+  writeln;
+  write('<<< Press <Enter> to return. >>>');
+  readln
+end;
+
+
+procedure Number_of_Characters;
+var
+  c : char;
+begin
+  number := 0;
+  for i := 1 to number_of_lines do
+    for j := 1 to _____________________________ do
+      begin
+        c := line[i][j];
+        if ((c >= 'a') and (c <= 'z')) _________ ((c >= 'A') and (c <= 'Z')) then
+          number := number + 1;
+      end;
+  writeln('There are ', number, ' characters.');
+  writeln;
+  write('<<< Press <Enter> to continue. >>>');
+  readln
+end;
+
+ 
+procedure Number_of_Words;
+var
+  new_word : boolean;
+  c : char;
+begin
+  number := 0;
+  for i := 1 to number_of_lines do
+    begin
+      new_word := true;
+      for j := 1 to length(line[i]) do
+        begin
+          c := line[i][j];
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        end
+    end;
+  writeln('There are ', number, ' words.');
+  writeln;
+  write('<<< Press <Enter> to continue. >>>');
+  readln
+end;
+
+procedure Number_of_Paragraphs;
+var
+  new_paragraph : boolean;
+begin
+  number := 0;
+  new_paragraph := true;
+  for i := 1 to number_of_lines do
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  writeln('There are ', number, ' paragraphs.');
+  writeln;
+  write('<<< Press <Enter> to continue. >>>');
+  readln
+end;
+
+procedure Frequency_of_Letters;
+var
+  frequency : array['A'..'Z'] of integer;
+  c : char;
+  total : integer;
+begin
+  clrscr;
+  total := 0;
+  for c := 'A' to 'Z' do
+    frequency[c] := 0;
+  for i := 1 to _________________________ do
+    for j := 1 to length(line[i]) do
+      begin
+        c := upcase(line[i][j]);
+        frequency[c] := ___________________________________ ;
+        if c in ['A'..'Z'] then
+          total := total + 1;
+      end;
+  writeln('Letter    Frequency');
+  writeln('-------------------');
+  for c := 'A' to 'Z' do
+    writeln(c:3, frequency[c]:15);
+  writeln('-------------------');
+  writeln('____________________________________);
+  writeln;
+  write('<<< Press <Enter> to continue. >>>');
+  readln
+end;
+
+
+procedure Frequency_of_expresion;
+var
+  expression, up_expression : string;
+  total : integer;
+begin
+  clrscr;
+  writeln('Enter the word/expression you want to count: ');
+  readln(expression);
+  up_expression := upcase(expression);
+  total := 0;
+  for i := 1 to _____________________________ do
+    for j := 1 to length(line[i])-length(up_expression) + 1 do
+      begin
+         if up_expression = upcase(_______________________________________________) then
+           total := total + 1;
+      end;
+  writeln;
+  writeln('Frequency of ''', expression, ''' is ', total);
+  writeln;
+  write('<<< Press <Enter> to continue. >>>');
+  readln
+end;
+
+ 
+procedure Justify_Paragraphs;   (** Bonus **)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+begin  { Main program }
+  Read_File;
+  repeat
+    clrscr;
+    writeln('Text File Analyst');
+    writeln;
+    writeln('***********************************');
+    writeln('(1) Display text file');
+    writeln('(2) Find the number of characters');
+    writeln('(3) Find the number of words');
+    writeln('(4) Find the number of paragraphs');
+    writeln('(5) Display frequencies of letters');
+    writeln('(6) Find the frequency of a given word/expression');
+    writeln('(7) Justify the paragraphs');
+    writeln('(8) Read another text file');
+    writeln('(9) Quit');
+    writeln('***********************************');
+    writeln;
+    write('Enter your choice: ');
+    readln(choice);
+    writeln;
+    case choice of
+      1 : _______________________________;
+      2 : _______________________________;
+      3 : _______________________________;
+      4 : _______________________________;
+      5 : _______________________________;
+      6 : _______________________________;
+      7 : _______________________________;
+      8 : _______________________________;
+    end;
+  until _______________________________
+end.

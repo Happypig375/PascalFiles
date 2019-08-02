@@ -1,0 +1,160 @@
+1
+Au Sham Ki
+F
+149
+2
+Au Yue
+F
+147
+3
+Chan Kai Bong
+M
+136
+4
+Chan Man Cheun
+M
+148
+5
+Chan Mei Ling
+M
+141
+6
+Chan Shui Wah
+F
+138
+7
+Chan Tai Man
+F
+137
+8
+Chan Wai Yee
+M
+140
+9
+Chan Yick Yee
+M
+158
+10
+Chau Tung
+F
+151
+11
+Cheung Chi Chung
+F
+160
+12
+Cheung Koo Ho
+F
+142
+13
+Cheung Yee Hung
+M
+137
+14
+Chui Tse Lung
+F
+144
+15
+Chung Kei Man
+F
+156
+16
+Fung Siu Wan
+F
+144
+17
+Ho Kam Shui
+M
+141
+18
+Ho Li
+F
+153
+19
+Hui Chung Hong
+M
+145
+20
+Hung Yen Yen
+M
+152
+21
+Kam Yung Kai
+F
+160
+22
+Kwan Wan Cheong
+M
+153
+23
+Kwan Yuen Ching
+F
+152
+24
+Kwok Foo Ho
+F
+141
+25
+Lam Tik Man
+F
+147
+26
+Lam Ting Cheong
+M
+146
+27
+Lau Yiu Wing
+F
+143
+28
+Lau Yum Meow
+M
+148
+29
+Tang Tsz Kit
+F
+148
+30
+Li Man Hon
+F
+155
+31
+Tse Wai Tak
+M
+141
+32
+Tang Ho Ming
+M
+158
+33
+Leung Chun Pong
+M
+144
+34
+Ngai Yat To
+M
+135
+35
+Tan Chi Chung
+M
+153
+36
+Tsang King Fung
+M
+136
+37
+Tang Chi Fung
+M
+149
+38
+Leung Wai Fung
+F
+155
+39
+Tsang Kwong Wing
+F
+158
+40
+Tang Kwun Leong
+M
+148

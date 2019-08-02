@@ -1,0 +1,30 @@
+program MCMarking;
+var
+  K, S : text;
+  filename : string;
+  KAns, SAns : char;      { KAns = Answer Key, SAns = Student¡¦s Answer }
+  numQ, numCor : integer;   { numQ = number of questions, numCor = number of correct answers }
+begin
+  write('Enter the file name: ');
+  readln(filename);
+  assign(K, 'AnsKey.txt');
+  assign(____________________);
+  reset(K);
+  ____________________;
+  numQ := 0;
+  numCor := 0;
+  while not eof(K) do
+    begin
+      readln(K, _______);
+      readln(S, SAns);
+      numQ := _________________;
+      if KAns = _________ then
+	      numCor := _______________________
+    end;
+  close(K);
+  close(S);
+  writeln('Number of questions: ', numQ);
+  writeln('Number of correct answers: ', numCor);
+  writeln('Correct Percent: ', _________________________________);
+  readln
+end.

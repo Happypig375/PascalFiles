@@ -1,0 +1,194 @@
+program MarkSystem;
+
+uses crt;
+
+const
+  max_stud = 100;
+
+var
+  studid : array[1..max_stud] of string;
+  studpw : array[1..max_stud] of string;
+  studname : array[1..max_stud] of string;
+  mark_chi : array[1..max_stud] of integer;
+  mark_eng : array[1..max_stud] of integer;
+  mark_mat : array[1..max_stud] of integer;
+  num_stud : integer;      
+stud_index : integer;
+
+
+procedure read_students;  { Reading data from students.txt file }
+var
+  i : integer;
+  f : text;
+begin
+  assign(f, 'students.txt');
+  reset(f);
+  i := 0;
+  while not eof(f) do
+    begin
+      i := i + 1;
+      readln(f, studid[i]);
+ 
+
+
+
+
+
+
+
+
+    end;
+  num_stud :=                                ;
+  close(f)
+end;
+
+
+procedure store_students;   { Storing data to students.txt file }
+var  i : integer;
+     f : text;
+begin
+
+
+
+
+ for i := 1 to num_stud do
+    begin
+      
+
+
+
+
+
+     writeln(f, mark_chi[i]);
+      writeln(f, mark_eng[i]);
+      writeln(f, mark_mat[i])
+    end;
+  
+end;
+
+ 
+procedure change_password(stud_index : integer);
+var
+  newpass :                  ;
+begin
+  clrscr;
+  writeln;
+  write('        Please enter your new password       : ');
+  readln(newpass);
+  studpw[stud_index] :=                          ;
+  store_students;
+  writeln;
+  writeln('        Password changed.');
+  writeln;
+  write('        Press <Enter> to return. ');
+  readln
+end;
+
+
+procedure display_marks(stud_index : integer);
+begin
+  clrscr;
+  writeln;
+  writeln('        Your Examination Results: ');
+  writeln;
+  writeln('        ------------------------------------- ');
+  writeln;
+  writeln('          Student ID  : ',                                   );
+  writeln;
+  writeln('          Name        : ',                                   );
+  writeln;
+  writeln('          Your Marks : ');
+  writeln;
+  writeln('                       Chinese     : ',                                 );
+  writeln;
+  writeln('                       English     : ',                                 );
+  writeln;
+  writeln('                       Mathematics : ',                                 );
+  writeln;
+  writeln;
+  writeln;
+  write('         <<< Press <Enter> to return. >>>');
+  readln
+end;
+
+procedure main_menu(stud_index : integer);
+var
+  choice : integer;
+begin
+  repeat
+    clrscr;
+    writeln;
+    writeln('                       Marks Checking System ');
+    writeln('                             Main Menu');
+    writeln;
+    writeln('               ------------------------------------');
+    writeln('                     1. Display marks');
+    writeln('                     2. Change password');
+    writeln('                     3. Quit');
+    writeln('               ------------------------------------');
+    writeln;
+    write('                 Enter choice: ');
+    readln(Choice);
+    writeln;
+    case choice of
+      1 :                                           ;
+ 
+     2 :                                           ;
+    end;
+  until                                 ;
+end;
+ 
+procedure login(var stud_index : integer);
+var
+  userid, password : string;
+  found : boolean;
+  i : integer;
+begin
+  clrscr;
+  writeln;
+  writeln;
+  writeln('                         Marks Checking System                ');
+  writeln;
+  writeln('                  * * * * * * * * * * * * * * * * * * * * * * *      ');
+  writeln('                  *                                           *      ');
+  writeln('                  *                 LOGIN                     *      ');
+  writeln('                  *                                           *      ');
+  writeln('                  * * * * * * * * * * * * * * * * * * * * * * *      ');
+  writeln;
+  write('                        UserID : ');
+  readln(userid);
+  writeln;
+  write('                      Password : ');
+  readln(password);
+  writeln;
+  writeln;
+  found := false;
+  i := 0;
+  while (i < num_stud) and                              do
+    begin
+      i := i + 1;
+      if (                   = studid[i]) and (password =                     ) then
+        begin
+          found :=                            ;
+          stud_index := i
+        end
+    end;
+  if not found then
+    begin
+      stud_index := 0;
+      writeln('':20,'> > > Invalid UserID or Password!');
+      write('':20,'> > > Press <Enter> to refresh.');
+      readln
+    end;
+end;
+
+
+begin  (* main body *)
+  read_students;
+  repeat
+    login(stud_index);
+    if stud_index <> 0 then
+     main_menu(stud_index)
+  until false;
+  readln
+end.

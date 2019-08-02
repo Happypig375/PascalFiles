@@ -1,0 +1,308 @@
+program TF_Marking;
+uses crt;
+const  maxstudno = 200; maxclasssize = 10; questno = 50;
+
+var
+  answer : string[questno];
+  stud_class : array[1..maxstudno] of string[2];
+  stud_no : array[1..maxstudno] of string[2];
+  stud_score : array[1..maxstudno] of integer;
+  class_code : array[1..maxclasssize] of string[6];
+  class_size : array[1..maxclasssize] of integer;
+  class_score : array[1..maxclasssize] of real;
+  quest_corr : array[1..questno] of integer;
+  stud_count, class_count : integer;
+
+procedure read_ans_keys;
+var
+  ans_file_name : string;
+  infile : text;
+begin
+  write('Enter the filename of the Answer Keys: ');
+  readln(ans_file_name);
+  assign(infile, ans_file_name);
+  reset(_____________);
+  readln(_________, answer);
+  close(infile)
+end;
+
+procedure calculate_stud_scores;
+var
+  stud_file_name : string;
+  infile : text;
+  stud_record : string;
+  stud_ans : string[questno];
+  i, j, k, corr_count : integer;
+begin
+  write('Enter the filename of the Students'' Answers: ');
+  readln(stud_file_name);
+  assign(_______________________);
+  __________________;
+
+  for k := 1 to questno do
+    quest_corr[k] := 0;
+
+  i := 0;
+  while _____________________________ do
+    begin
+      i := i + 1;
+      readln(infile, stud_record);
+      stud_class[i] := copy(stud_record, 1, 2);
+      stud_no[i] := copy(_____________________________);
+      stud_ans   := copy(stud_record,______, questno);
+
+      corr_count := 0;
+      for j := 1 to questno do
+	    if stud_ans[j] = ______________ then
+	       begin
+	         corr_count := corr_count + 1;
+	         quest_corr[j] := ____________________
+	       end;
+      stud_score[i] := corr_count;
+    end;
+  stud_count := i;
+
+  close(infile)
+end;
+
+procedure calculate_class_score;
+var
+  i, j : integer;   { i = pointer for student, j = pointer for class }
+  found : boolean;
+begin
+  class_code[1] := stud_class[1];
+  class_size[1] := 1;
+  class_score[1] := stud_score[1];
+  class_count := 1;
+  for i := 2 to stud_count do
+    begin
+      j := 1;
+      found := false;
+      repeat
+	    if class_code[j] = stud_class[i] then
+	      begin
+	        class_size[j] :=  ___________________________________________;
+	        class_score[j] := __________________________________________;
+	        found := ________________________________
+	      end
+	    else
+	      j := j + 1
+      until found or (j > ________________);
+      if not found then
+	    begin
+	      class_count := j;
+	      class_code[class_count] := stud_class[i];
+	      class_size[class_count] := 1;
+	      class_score[class_count] := ____________________
+	    end
+    end;
+  for i := 1 to class_count do
+    class_score[i] := class_score[i]/______________________________
+end;
+
+procedure sort_stud_score;  { descending order }
+var
+  k, j : integer;
+  tmp_class : string[2];
+  tmp_no : string[2];
+  tmp_score : integer;
+begin
+ { Bubble Sort }
+  for k := 1 to stud_count - 1 do
+    for j := 1 to stud_count - k do
+      if stud_score[j] < stud_score[j+1] then
+	      begin
+		    tmp_class := stud_class[j];
+		    stud_class[j] := stud_class[j+1];
+		    stud_class[j+1] := tmp_class;
+		    tmp_no := stud_no[j];
+		    stud_no[j] := stud_no[j+1];
+		    stud_no[j+1] := tmp_no;
+
+
+
+
+
+
+
+
+          end 
+end;
+
+ 
+procedure sort_class_score;  { descending order }
+var
+  k, j : integer;
+  tmp_size : integer;
+  tmp_code : string[2];
+  tmp_score : real;
+begin
+  for ______________________________________ do
+    for __________________________________________ do
+      if class_score[j] < class_score[j+1] then
+	      begin
+		    tmp_code := class_code[j];
+		    class_code[j] := class_code[j+1];
+		    class_code[j+1] := tmp_code;
+
+		    tmp_size := class_size[j];
+		    class_size[j] := class_size[j+1];
+		    class_size[j+1] := tmp_size;
+
+	        tmp_score := class_score[j];
+		    class_score[j] := class_score[j+1];
+		    class_score[j+1] := tmp_score;
+	      end
+end;
+
+
+procedure save_report;
+var
+  report_file_name : string;
+  i : integer;
+  outfile : text;
+begin
+  writeln;
+  write('Enter the filename of the Report file: ');
+  readln(report_file_name);
+  assign(____________________________);
+  _____________(outfile);
+  writeln(____________, '<< Report on T/F Questions >>');
+  writeln(outfile);
+  writeln(outfile, '*****************************************************');
+  writeln(outfile, 'Question Analysis');
+  writeln(outfile);
+  writeln(outfile, 'Percentage correct for each question:');
+  for i := 1 to 9 do
+    begin
+      write(outfile, ' Q', i, quest_corr[i]/_____________________________, '%  ');
+      if i mod 5 = 0 then
+	     writeln(outfile)
+    end;
+  for i := 10 to questno do
+    begin
+      write(outfile, 'Q', i, quest_corr[i]/stud_count*100:6:2, '%  ');
+      if i mod 5 = 0 then
+	     _________________________________
+    end;
+  writeln(outfile);
+  writeln(outfile, '*****************************************************');
+  writeln(outfile, 'Class Results:');
+  writeln(outfile);
+  writeln(outfile, 'Total number of classes: ', ____________________);
+  writeln(outfile);
+  writeln(outfile, 'Average score of classes in descending order:');
+  writeln(outfile, 'Class':5, 'Size':6, 'Average Score':15);
+  for i := 1 to class_count do
+    writeln(outfile, class_code[i]:5, __________________________, class_score[i]:15:2);
+  writeln(outfile);
+  writeln(outfile, '*****************************************************');
+  writeln(outfile, 'Student Results:');
+  writeln(outfile);
+  writeln(outfile, 'Total number of students: ', stud_count);
+  writeln(outfile);
+  writeln(outfile, 'Scores of students in descending order:');
+  writeln(outfile, 'Class':5, 'No.':5, 'Score':7);
+  for i := 1 to stud_count do
+    writeln(outfile, stud_class[i]:5, stud_no[i]:5, ______________________);
+  writeln(outfile);
+  writeln(outfile, '*****************************************************');
+  __________________________;
+  writeln;
+  writeln('File saved');
+  write('Press <enter> to continue');
+  readln
+end;
+
+procedure show_results;
+var
+  choice : char;
+
+  procedure show_top_five;
+  var
+    i : integer;
+  begin
+    writeln('Top Five Results:');
+    writeln('Class':5, 'No.':5, 'Score':7);
+    for i := 1 to 5 do
+      writeln(stud_class[i]:5, stud_no[i]:5, stud_score[i]:7);
+    writeln('*****************************************************')
+  end;
+
+  procedure show_bottom_five;
+  var
+    i : integer;
+  begin
+    writeln('Bottom Five Results:');
+    writeln('Class':5, 'No.':5, 'Score':7);
+    for ________________________________________________________ do
+      writeln(stud_class[i]:5, stud_no[i]:5, stud_score[i]:7);
+    writeln('*****************************************************')
+  end;
+
+  procedure show_class_average;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  procedure question_analysis;
+
+
+
+
+ 
+begin  { Main program }
+  repeat
+    clrscr;
+    writeln('<< Results of T/F Questions >>');
+    writeln('*****************************');
+    writeln;
+    writeln('1. Show top five');
+    writeln('2. Show bottom five');
+    writeln('3. Show class average scores');
+    writeln('4. Question Analysis ');
+    writeln('5. Stop program' );
+    writeln;
+    write('Enter your choice (1/2/3/4/5) : ' );
+    readln(choice );
+    writeln;
+    case choice of
+      '1' : show_top_five;
+      '2' : _______________________;
+      '3' : _______________________;
+      '4' : _______________________
+    end;
+    writeln;
+    write('Press <enter> to continue');
+    readln
+  until choice = '5';
+  writeln( 'Program stopped.' )
+end;
+
+begin
+  ClrScr;
+  read_ans_keys;
+ 
+
+
+
+
+
+
+
+
+
+
+
+end.

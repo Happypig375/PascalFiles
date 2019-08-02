@@ -1,0 +1,12 @@
+Try to identify the program involved.  One way to do this is
+to see if the error occurs when the program is not running.
+If you suspect a memory resident program or device driver,
+try by passing it when your computer starts.
+
+Try changing the order in which you load device drivers and
+Memory resident programs. This might help because some
+errors occur only under specific memory conditions.
+
+If you are using compressed floppy disks with automounting enabled,
+you might encounter error messages or other problems while using File
+Manager.

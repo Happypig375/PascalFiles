@@ -1,0 +1,300 @@
+s001
+1234
+Au Sham Ki, Bobby        
+81
+42
+59
+s002
+1234
+Au Yue, Joanne           
+63
+78
+76
+s003
+1234
+Chan Kai Bong            
+70
+97
+16
+s004
+1234
+Chan Man Cheun           
+72
+29
+88
+s005
+1234
+Chan Mei Ling            
+50
+56
+42
+s006
+1234
+Chan Shui Wah, Shirley   
+13
+52
+32
+s007
+1234
+Chan Tai Man             
+54
+89
+85
+s008
+1234
+Chan Wai Yee, Wendy      
+24
+79
+15
+s009
+1234
+Chan Yick Yee, Eliza     
+67
+18
+93
+s010
+1234
+Chau Tung, Donnie        
+61
+85
+57
+s011
+1234
+Cheung Chi Chung         
+11
+23
+95
+s012
+1234
+Cheung Koo Ho            
+85
+60
+67
+s013
+1234
+Cheung Yee Hung, Teresa  
+49
+15
+96
+s014
+1234
+Chui Tse Lung            
+48
+87
+74
+s015
+1234
+Chung Kei Man, Mandy     
+74
+41
+74
+s016
+1234
+Fung Siu Wan, Melanie    
+67
+55
+65
+s017
+1234
+Ho Kam Shui, Tom         
+21
+23
+15
+s018
+1234
+Ho Li, Lily              
+57
+67
+78
+s019
+1234
+Hui Chung Hong           
+21
+13
+94
+s020
+1234
+Hung Yen Yen             
+71
+90
+28
+s021
+1234
+Kam Yung Kai             
+50
+30
+63
+s022
+1234
+Kwan Wan Cheong          
+16
+23
+95
+s023
+1234
+Kwan Yuen Ching, Cindy   
+72
+25
+27
+s024
+1234
+Kwok Foo Ho              
+66
+98
+30
+s025
+1234
+Lam Tik Man              
+34
+10
+26
+s026
+1234
+Lam Ting Cheong          
+13
+68
+59
+s027
+1234
+Lau Yiu Wing             
+77
+46
+99
+s028
+1234
+Lau Yum Meow             
+92
+59
+92
+s029
+1234
+Tang Tsz Kit             
+92
+65
+69
+s030
+1234
+Li Man Hon               
+30
+59
+87
+s031
+1234
+Tse Wai Tak              
+68
+36
+54
+s032
+1234
+Tang Ho Ming             
+32
+56
+46
+s033
+1234
+Leung Chun Pong          
+29
+41
+58
+s034
+1234
+Ngai Yat To              
+77
+58
+75
+s035
+1234
+Tan Chi Chung            
+75
+48
+67
+s036
+1234
+Tsang King Fung          
+74
+80
+25
+s037
+1234
+Tang Chi Fung            
+68
+15
+35
+s038
+1234
+Leung Wai Fung           
+41
+74
+26
+s039
+1234
+Tsang Kwong Wing         
+58
+96
+23
+s040
+1234
+Tang Kwun Leong          
+71
+98
+42
+s041
+1234
+Tang Pui Yip             
+18
+52
+95
+s042
+1234
+Tong Chun Wai            
+54
+17
+68
+s043
+1234
+Tam Wai Fai              
+78
+64
+14
+s044
+1234
+Pong Ying Kit            
+11
+25
+28
+s045
+1234
+Pang Ling Yee            
+81
+42
+89
+s046
+1234
+Tam King Wai             
+85
+67
+80
+s047
+1234
+Ng Yu Kit                
+81
+79
+62
+s048
+1234
+Po Pak Hong              
+74
+54
+17
+s049
+1234
+Siu Tai Wai              
+90
+97
+39
+s050
+1234
+Tam Chung Kok            
+45
+41
+94
